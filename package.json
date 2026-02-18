@@ -1,0 +1,27 @@
+{
+  "name": "kaka-lang",
+  "version": "1.0.0",
+  "description": "A toy programming language written in Bengali (Kaka Lang)",
+  "author": "Krishnendu Paul (https://krishnendu.com)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bidhata/kaka-lang.git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@types/node": "^25.2.3",
+    "@types/readline-sync": "^1.4.8",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "readline-sync": "^1.4.10"
+  }
+}
