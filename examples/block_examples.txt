@@ -1,0 +1,103 @@
+# Kaka Lang Block Editor - Example Programs
+
+These examples show what you can build with the block editor.
+Open the web interface and recreate these using blocks!
+
+## Example 1: Greeting
+Blocks:
+- কাকা বলো: "নমস্কার কাকা!"
+- কাকা বলো: "Welcome to Kaka Lang"
+
+Output:
+নমস্কার কাকা!
+Welcome to Kaka Lang
+
+---
+
+## Example 2: Simple Calculator
+Blocks:
+- কাকা রাখো: name=x, value=15
+- কাকা রাখো: name=y, value=25
+- কাকা রাখো: name=sum, value=x + y
+- কাকা বলো: "Sum is:"
+- কাকা বলো: sum
+
+Output:
+Sum is:
+40
+
+---
+
+## Example 3: Even Number Checker
+Blocks:
+- কাকা রাখো: name=num, value=8
+- যদি কাকা: condition=num % 2 == 0
+  └─ কাকা বলো: "Even number"
+
+Output:
+Even number
+
+---
+
+## Example 4: Countdown
+Blocks:
+- কাকা রাখো: name=count, value=5
+- যতক্ষণ কাকা: condition=count > 0
+  └─ কাকা বলো: count
+  └─ কাকা রাখো: name=count, value=count - 1
+- কাকা বলো: "Blast off!"
+
+Output:
+5
+4
+3
+2
+1
+Blast off!
+
+---
+
+## Example 5: Multiplication Function
+Blocks:
+- ফাংশন কাকা: name=multiply, params=a, b
+  └─ ফেরত নাও: a * b
+- কাকা রাখো: name=result, value=multiply(6, 7)
+- কাকা বলো: "6 x 7 ="
+- কাকা বলো: result
+
+Output:
+6 x 7 =
+42
+
+---
+
+## Example 6: Temperature Check
+Blocks:
+- কাকা রাখো: name=temp, value=35
+- যদি কাকা: condition=temp > 30
+  └─ কাকা বলো: "Hot day!"
+- যদি কাকা: condition=temp < 20
+  └─ কাকা বলো: "Cold day!"
+
+Output:
+Hot day!
+
+---
+
+## Example 7: Sum of Numbers
+Blocks:
+- কাকা রাখো: name=i, value=1
+- কাকা রাখো: name=sum, value=0
+- যতক্ষণ কাকা: condition=i <= 5
+  └─ কাকা রাখো: name=sum, value=sum + i
+  └─ কাকা রাখো: name=i, value=i + 1
+- কাকা বলো: "Sum of 1 to 5:"
+- কাকা বলো: sum
+
+Output:
+Sum of 1 to 5:
+15
+
+---
+
+Try building these yourself in the block editor!

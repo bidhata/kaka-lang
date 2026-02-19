@@ -1,7 +1,8 @@
 {
   "name": "kaka-lang-web",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "Web interface for Kaka Lang - Bengali programming language with block editor",
   "type": "module",
   "scripts": {
     "dev": "vite",

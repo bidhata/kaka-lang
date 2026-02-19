@@ -3,8 +3,10 @@ import './App.css'
 import { tokenize } from './core/tokenizer'
 import { Parser } from './core/parser'
 import { Interpreter } from './core/interpreter'
+import BlockEditor from './BlockEditor'
 
 function App() {
+  const [mode, setMode] = useState<'text' | 'blocks'>('blocks');
   const [code, setCode] = useState(`ও কাকা
   কাকা রাখো a = 10;
   কাকা রাখো b = 20;
@@ -78,6 +80,10 @@ function App() {
     }
   }
 
+  if (mode === 'blocks') {
+    return <BlockEditor onBackToText={() => setMode('text')} />;
+  }
+
   return (
     <div className="container">
       <header>
@@ -86,6 +92,9 @@ function App() {
           <p>Bhai-lang inspired, localized in Bengali</p>
         </div>
         <div className="header-right">
+          <button onClick={() => setMode('blocks')} className="mode-switch-btn">
+            🧩 Block Mode
+          </button>
           <p>Made by <a href="https://krishnendu.com" target="_blank" rel="noopener noreferrer">Krishnendu Paul</a></p>
         </div>
       </header>

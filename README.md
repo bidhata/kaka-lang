@@ -7,6 +7,19 @@ Made by **Krishnendu Paul** ([@bidhata](https://krishnendu.com))
 A toy programming language written in Bengali, inspired by [bhai-lang](https://github.com/DulLabs/bhai-lang).
 Code starts with `ও কাকা` (O Kaka) and ends with `আসি কাকা` (Ashi Kaka).
 
+**📖 [Read in Bengali (বাংলায় পড়ুন) →](./README_BN.md)**
+
+## 🎉 NEW: Visual Block Editor!
+
+Learn programming with a Scratch-like drag-and-drop interface! Perfect for beginners.
+
+- 🧩 Visual blocks instead of typing code
+- 🎨 Color-coded by category
+- 🔄 Toggle between blocks and text
+- 📚 Complete tutorials included
+
+**[Get Started in 5 Minutes →](./web/QUICKSTART.md)** | **[Full Documentation →](./web/INDEX.md)**
+
 ## Installation
 
 ```bash
@@ -98,9 +111,21 @@ npm install
 npm run dev
 ```
 Features:
-- Syntax highlighting (basic editor)
-- **Virtual Keyboard**: Click buttons to insert Kaku keywords easily!
-- Output console integrated.
+- **Text Editor Mode**: 
+  - Syntax highlighting (basic editor)
+  - Virtual Keyboard: Click buttons to insert Kaku keywords easily!
+  - Output console integrated
+- **Block Editor Mode** (NEW! 🧩):
+  - Scratch-like visual programming interface
+  - Drag and drop blocks to create programs
+  - Perfect for beginners learning to code
+  - Color-coded blocks by category
+  - No typing required!
+  - See [Block Editor Tutorial](./examples/block_tutorial.md) for detailed guide
+
+Switch between modes using the buttons in the header.
 
 ## Documentation
-For a full coding guide, check out [GUIDE.md](./GUIDE.md).
+For a full coding guide, check out:
+- [GUIDE.md](./GUIDE.md) - English guide
+- [GUIDE_BN.md](./GUIDE_BN.md) - বাংলা গাইড (Bengali guide)
