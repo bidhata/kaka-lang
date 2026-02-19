@@ -13,10 +13,13 @@ Code starts with `ও কাকা` (O Kaka) and ends with `আসি কাক�
 
 Learn programming with a Scratch-like drag-and-drop interface! Perfect for beginners.
 
+![Kaka Lang Block Editor](./screenshots/block-editor.png)
+
 - 🧩 Visual blocks instead of typing code
 - 🎨 Color-coded by category
 - 🔄 Toggle between blocks and text
 - 📚 Complete tutorials included
+- 📱 Mobile & tablet optimized
 
 **[Get Started in 5 Minutes →](./web/QUICKSTART.md)** | **[Full Documentation →](./web/INDEX.md)**
 

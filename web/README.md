@@ -4,6 +4,12 @@ This is the web interface for **Kaka Lang**, a toy programming language written 
 
 **📖 [Read in Bengali (বাংলায় পড়ুন) →](./README_BN.md)**
 
+## Screenshot
+
+![Kaka Lang Block Editor](../screenshots/block-editor.png)
+
+*Block editor showing Bengali programming blocks with real-time code execution*
+
 ## Features
 
 ### Two Programming Modes
@@ -13,6 +19,7 @@ This is the web interface for **Kaka Lang**, a toy programming language written 
 - Virtual Keyboard: One-click typing for Bengali keywords
 - Real-time code execution
 - Integrated output console
+- **Mobile-optimized**: Responsive design for all devices
 
 #### 2. Block Editor Mode (NEW! 🧩)
 - Scratch-like visual programming interface
@@ -21,6 +28,7 @@ This is the web interface for **Kaka Lang**, a toy programming language written 
 - Color-coded blocks by category
 - Toggle to view generated code
 - No typing required!
+- **Touch-friendly**: Optimized for mobile and tablet devices
 
 ## Quick Start
 
@@ -43,6 +51,7 @@ Open `http://localhost:5173` and start coding!
 - [QUICKSTART.md](./QUICKSTART.md) - Get started in 5 minutes
 - [BLOCK_EDITOR.md](./BLOCK_EDITOR.md) - Complete block editor guide
 - [FEATURES.md](./FEATURES.md) - Full feature list
+- [MOBILE_OPTIMIZATION.md](./MOBILE_OPTIMIZATION.md) - Mobile & tablet guide
 - [../examples/block_tutorial.md](../examples/block_tutorial.md) - Step-by-step tutorials
 - [../examples/block_examples.txt](../examples/block_examples.txt) - Example programs
 

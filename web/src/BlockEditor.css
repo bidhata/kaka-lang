@@ -641,3 +641,504 @@
 .paste-code-button:hover {
   background: #1976D2;
 }
+
+/* ========================================
+   MOBILE RESPONSIVE STYLES
+   ======================================== */
+
+/* Tablet and below (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .block-editor-content {
+    grid-template-columns: 200px 1fr 250px;
+    gap: 8px;
+    padding: 8px;
+  }
+
+  .block-palette {
+    padding: 10px;
+  }
+
+  .block-palette h3 {
+    font-size: 16px;
+  }
+
+  .palette-section button {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .block-output {
+    padding: 10px;
+  }
+
+  .output-console {
+    font-size: 12px;
+  }
+}
+
+/* Mobile landscape and below (max-width: 768px) */
+@media (max-width: 768px) {
+  .block-editor-header {
+    padding: 12px 15px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .block-editor-header h2 {
+    font-size: 18px;
+    width: 100%;
+  }
+
+  .back-button {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
+  .block-editor-content {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  /* Make palette collapsible on mobile */
+  .block-palette {
+    max-height: 200px;
+    overflow-y: auto;
+  }
+
+  .block-palette h3 {
+    font-size: 16px;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .palette-search {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .palette-section h4 {
+    font-size: 13px;
+  }
+
+  .palette-section button {
+    padding: 8px;
+    font-size: 12px;
+    gap: 6px;
+  }
+
+  /* Workspace adjustments */
+  .block-workspace {
+    padding: 12px;
+    order: 2;
+  }
+
+  .workspace-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .workspace-header h3 {
+    font-size: 16px;
+  }
+
+  .workspace-actions {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .workspace-actions button {
+    flex: 1;
+    min-width: 80px;
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+  .workspace-area {
+    min-height: 300px;
+  }
+
+  /* Block adjustments */
+  .block {
+    padding: 10px;
+    margin-bottom: 8px;
+  }
+
+  .block-header {
+    flex-wrap: wrap;
+  }
+
+  .block-label {
+    font-size: 13px;
+  }
+
+  .block-icon {
+    font-size: 16px;
+  }
+
+  .block-input,
+  .block-select {
+    font-size: 12px;
+    padding: 6px 8px;
+  }
+
+  .block-children {
+    padding: 8px;
+    min-height: 40px;
+  }
+
+  .block-placeholder {
+    padding: 15px;
+    font-size: 12px;
+  }
+
+  /* Output section */
+  .block-output {
+    padding: 12px;
+    order: 3;
+    max-height: 250px;
+  }
+
+  .block-output h3 {
+    font-size: 16px;
+  }
+
+  .output-console {
+    font-size: 12px;
+    min-height: 150px;
+    max-height: 200px;
+  }
+
+  /* Dialog adjustments */
+  .paste-dialog {
+    width: 95%;
+    max-height: 90vh;
+  }
+
+  .paste-dialog-header {
+    padding: 15px;
+  }
+
+  .paste-dialog-header h3 {
+    font-size: 18px;
+  }
+
+  .paste-dialog-textarea {
+    padding: 15px;
+    font-size: 13px;
+    min-height: 200px;
+  }
+
+  .paste-dialog-actions {
+    padding: 15px;
+    flex-wrap: wrap;
+  }
+
+  .dialog-cancel,
+  .dialog-convert {
+    flex: 1;
+    min-width: 100px;
+  }
+}
+
+/* Mobile portrait (max-width: 480px) */
+@media (max-width: 480px) {
+  .block-editor-header {
+    padding: 10px;
+  }
+
+  .block-editor-header h2 {
+    font-size: 16px;
+  }
+
+  .back-button {
+    padding: 6px 10px;
+    font-size: 11px;
+  }
+
+  .block-editor-content {
+    padding: 8px;
+    gap: 8px;
+  }
+
+  /* Compact palette */
+  .block-palette {
+    padding: 8px;
+    max-height: 180px;
+  }
+
+  .block-palette h3 {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .palette-search {
+    padding: 6px 8px;
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+
+  .palette-section {
+    margin-bottom: 15px;
+  }
+
+  .palette-section h4 {
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+
+  .palette-section button {
+    padding: 8px 6px;
+    font-size: 11px;
+    gap: 4px;
+    margin-bottom: 6px;
+  }
+
+  /* Compact workspace */
+  .block-workspace {
+    padding: 10px;
+  }
+
+  .workspace-header {
+    gap: 8px;
+  }
+
+  .workspace-header h3 {
+    font-size: 14px;
+  }
+
+  .workspace-actions {
+    gap: 6px;
+  }
+
+  .workspace-actions button {
+    padding: 6px 10px;
+    font-size: 11px;
+    min-width: 70px;
+  }
+
+  .workspace-area {
+    min-height: 250px;
+    padding: 10px;
+  }
+
+  .workspace-empty {
+    padding: 30px 15px;
+    font-size: 14px;
+  }
+
+  /* Compact blocks */
+  .block {
+    padding: 8px;
+    margin-bottom: 6px;
+  }
+
+  .block-header {
+    margin-bottom: 6px;
+    gap: 6px;
+  }
+
+  .block-label {
+    font-size: 12px;
+  }
+
+  .block-icon {
+    font-size: 14px;
+  }
+
+  .block-actions {
+    gap: 3px;
+  }
+
+  .block-copy,
+  .block-duplicate,
+  .block-delete {
+    width: 22px;
+    height: 22px;
+    font-size: 12px;
+  }
+
+  .block-params {
+    gap: 5px;
+  }
+
+  .block-input,
+  .block-select {
+    padding: 5px 8px;
+    font-size: 11px;
+  }
+
+  .block-input-small {
+    width: 60px;
+  }
+
+  .block-children {
+    padding: 6px;
+    margin-top: 8px;
+    min-height: 35px;
+  }
+
+  .block-placeholder {
+    padding: 12px;
+    font-size: 11px;
+  }
+
+  .block-else-label {
+    padding: 5px 8px;
+    font-size: 11px;
+    margin-top: 8px;
+  }
+
+  /* Compact output */
+  .block-output {
+    padding: 10px;
+    max-height: 200px;
+  }
+
+  .block-output h3 {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .output-console {
+    padding: 10px;
+    font-size: 11px;
+    min-height: 120px;
+    max-height: 150px;
+  }
+
+  .output-empty {
+    padding: 30px 15px;
+    font-size: 13px;
+  }
+
+  /* Compact dialog */
+  .paste-dialog {
+    width: 98%;
+    max-height: 95vh;
+  }
+
+  .paste-dialog-header {
+    padding: 12px;
+  }
+
+  .paste-dialog-header h3 {
+    font-size: 16px;
+  }
+
+  .dialog-close {
+    width: 28px;
+    height: 28px;
+    font-size: 24px;
+  }
+
+  .paste-dialog-textarea {
+    padding: 12px;
+    font-size: 12px;
+    min-height: 180px;
+  }
+
+  .paste-dialog-actions {
+    padding: 12px;
+    gap: 8px;
+  }
+
+  .dialog-cancel,
+  .dialog-convert {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+
+  /* Code preview adjustments */
+  .code-preview {
+    padding: 15px;
+    font-size: 12px;
+  }
+}
+
+/* Extra small devices (max-width: 360px) */
+@media (max-width: 360px) {
+  .block-editor-header h2 {
+    font-size: 14px;
+  }
+
+  .workspace-actions button {
+    font-size: 10px;
+    padding: 5px 8px;
+    min-width: 60px;
+  }
+
+  .palette-section button {
+    font-size: 10px;
+    padding: 6px 4px;
+  }
+
+  .block-label {
+    font-size: 11px;
+  }
+
+  .block-input,
+  .block-select {
+    font-size: 10px;
+    padding: 4px 6px;
+  }
+}
+
+/* Landscape orientation adjustments */
+@media (max-height: 500px) and (orientation: landscape) {
+  .block-editor-content {
+    grid-template-columns: 180px 1fr 220px;
+  }
+
+  .block-palette {
+    max-height: calc(100vh - 80px);
+  }
+
+  .block-output {
+    max-height: calc(100vh - 80px);
+  }
+
+  .output-console {
+    max-height: calc(100vh - 140px);
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  /* Larger touch targets */
+  .palette-section button {
+    padding: 12px;
+    margin-bottom: 10px;
+  }
+
+  .block-copy,
+  .block-duplicate,
+  .block-delete {
+    width: 28px;
+    height: 28px;
+    font-size: 14px;
+  }
+
+  .workspace-actions button {
+    padding: 10px 14px;
+  }
+
+  /* Prevent text selection during drag */
+  .block {
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+  }
+
+  /* Better touch feedback */
+  .block:active {
+    transform: scale(1.03);
+  }
+
+  .palette-section button:active {
+    transform: scale(0.95);
+  }
+}

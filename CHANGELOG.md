@@ -24,6 +24,9 @@ All notable changes to Kaka Lang will be documented in this file.
   - Virtual keyboard for Bengali keywords
   - Real-time code execution
   - Integrated output console
+  - **Mobile-responsive design** (NEW!)
+  - **Touch-optimized interactions** (NEW!)
+  - **Tablet-friendly layout** (NEW!)
 
 - Block Editor (Visual Programming):
   - Scratch-like drag-and-drop interface
@@ -35,6 +38,9 @@ All notable changes to Kaka Lang will be documented in this file.
   - Block search and filter
   - Clear workspace feature
   - Nested block support (if-else, loops, functions)
+  - **Mobile and tablet optimized** (NEW!)
+  - **Touch-friendly drag and drop** (NEW!)
+  - **Responsive layout for all devices** (NEW!)
 
 - Documentation:
   - Complete language guide (English and Bengali)

@@ -23,3 +23,9 @@ web/node_modules/
 *.tmp
 *.temp
 .cache/
+
+# Keep screenshots
+!screenshots/
+!screenshots/*.png
+!screenshots/*.jpg
+!screenshots/*.gif
