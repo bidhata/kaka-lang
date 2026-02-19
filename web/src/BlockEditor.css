@@ -13,6 +13,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-shrink: 0;
 }
 
 .block-editor-header h2 {
@@ -44,6 +45,7 @@
   gap: 10px;
   padding: 10px;
   overflow: hidden;
+  min-height: 0;
 }
 
 /* Palette */
@@ -478,6 +480,65 @@
 
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+/* Footer */
+.block-editor-footer {
+  background: white;
+  padding: 12px 20px;
+  box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+  text-align: center;
+  border-top: 1px solid #e0e0e0;
+}
+
+.block-editor-footer p {
+  margin: 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.block-editor-footer a {
+  color: #2196F3;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.block-editor-footer a:hover {
+  color: #1976D2;
+  text-decoration: underline;
+}
+
+.github-icon {
+  display: inline-block;
+  margin-right: 4px;
+}
+
+/* Drag and drop visual feedback */
+.workspace-area {
+  position: relative;
+}
+
+.block.dragging {
+  opacity: 0.5;
+  transform: scale(0.95);
+}
+
+.drag-indicator {
+  height: 3px;
+  background: #4CAF50;
+  border-radius: 2px;
+  margin: 5px 0;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
 }
 
 

@@ -95,7 +95,6 @@ function App() {
           <button onClick={() => setMode('blocks')} className="mode-switch-btn">
             🧩 Block Mode
           </button>
-          <p>Made by <a href="https://krishnendu.com" target="_blank" rel="noopener noreferrer">Krishnendu Paul</a></p>
         </div>
       </header>
 
@@ -147,6 +146,16 @@ function App() {
           </div>
         </div>
       </div>
+
+      <footer className="app-footer">
+        <p>
+          Made with ❤️ by <a href="https://krishnendu.com" target="_blank" rel="noopener noreferrer">Krishnendu Paul</a>
+          {' | '}
+          <a href="https://github.com/bidhata/kaka-lang" target="_blank" rel="noopener noreferrer">
+            ⭐ GitHub
+          </a>
+        </p>
+      </footer>
     </div>
   )
 }

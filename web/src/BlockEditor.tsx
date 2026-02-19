@@ -75,6 +75,7 @@ export default function BlockEditor({ onBackToText }: BlockEditorProps) {
   const [blocks, setBlocks] = useState<Block[]>([]);
   const [output, setOutput] = useState<string[]>([]);
   const [draggedBlock, setDraggedBlock] = useState<string | null>(null);
+  const [dragOverIndex, setDragOverIndex] = useState<number | null>(null);
   const [showCode, setShowCode] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
   const [copiedBlock, setCopiedBlock] = useState<Block | null>(null);
@@ -516,6 +517,36 @@ export default function BlockEditor({ onBackToText }: BlockEditorProps) {
     if (movedBlock) {
       newBlocks = addToElseContainer(newBlocks);
     }
+    setBlocks(newBlocks);
+  };
+
+  const reorderBlocks = (draggedId: string, targetIndex: number) => {
+    let draggedBlockData: Block | null = null;
+    
+    // Find and remove the dragged block from anywhere in the tree
+    const removeBlock = (blocks: Block[]): Block[] => {
+      return blocks.filter(block => {
+        if (block.id === draggedId) {
+          draggedBlockData = block;
+          return false;
+        }
+        if (block.children) {
+          block.children = removeBlock(block.children);
+        }
+        if (block.elseChildren) {
+          block.elseChildren = removeBlock(block.elseChildren);
+        }
+        return true;
+      });
+    };
+
+    let newBlocks = removeBlock([...blocks]);
+    
+    // Insert at the target index
+    if (draggedBlockData) {
+      newBlocks.splice(targetIndex, 0, draggedBlockData);
+    }
+    
     setBlocks(newBlocks);
   };
 
@@ -1059,11 +1090,48 @@ export default function BlockEditor({ onBackToText }: BlockEditorProps) {
             <pre>{`ও কাকা\n${blocksToCode(blocks)}আসি কাকা`}</pre>
           </div>
         ) : (
-          <div className="workspace-area">
+          <div 
+            className="workspace-area"
+            onDragOver={(e) => e.preventDefault()}
+            onDrop={(e) => {
+              e.preventDefault();
+              setDragOverIndex(null);
+            }}
+          >
             {blocks.length === 0 ? (
               <div className="workspace-empty">বাম দিক থেকে ব্লক টেনে আনুন</div>
             ) : (
-              blocks.map(block => renderBlock(block))
+              blocks.map((block, index) => (
+                <div
+                  key={block.id}
+                  onDragOver={(e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    setDragOverIndex(index);
+                  }}
+                  onDragLeave={(e) => {
+                    e.stopPropagation();
+                    if (e.currentTarget === e.target) {
+                      setDragOverIndex(null);
+                    }
+                  }}
+                  onDrop={(e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    if (draggedBlock && draggedBlock !== block.id) {
+                      reorderBlocks(draggedBlock, index);
+                    }
+                    setDragOverIndex(null);
+                  }}
+                  style={{
+                    borderTop: dragOverIndex === index ? '3px solid #4CAF50' : 'none',
+                    paddingTop: dragOverIndex === index ? '5px' : '0',
+                    transition: 'all 0.2s ease'
+                  }}
+                >
+                  {renderBlock(block)}
+                </div>
+              ))
             )}
           </div>
         )}
@@ -1079,6 +1147,16 @@ export default function BlockEditor({ onBackToText }: BlockEditorProps) {
           )}
         </div>
       </div>
+      </div>
+
+      <div className="block-editor-footer">
+        <p>
+          Made with ❤️ by <a href="https://krishnendu.com" target="_blank" rel="noopener noreferrer">Krishnendu Paul</a>
+          {' | '}
+          <a href="https://github.com/bidhata/kaka-lang" target="_blank" rel="noopener noreferrer">
+            <span className="github-icon">⭐</span> GitHub
+          </a>
+        </p>
       </div>
 
       {showPasteDialog && (
