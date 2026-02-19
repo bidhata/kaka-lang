@@ -7,6 +7,8 @@ Made by **Krishnendu Paul** ([@bidhata](https://krishnendu.com))
 A toy programming language written in Bengali, inspired by [bhai-lang](https://github.com/DulLabs/bhai-lang).
 Code starts with `ও কাকা` (O Kaka) and ends with `আসি কাকা` (Ashi Kaka).
 
+## 🎉 DEMO is Live :  [https://kaka-lang.pages.dev](https://kaka-lang.pages.dev/) ##
+
 **📖 [Read in Bengali (বাংলায় পড়ুন) →](./README_BN.md)**
 
 ## 🎉 NEW: Visual Block Editor!
@@ -132,3 +134,4 @@ Switch between modes using the buttons in the header.
 For a full coding guide, check out:
 - [GUIDE.md](./GUIDE.md) - English guide
 - [GUIDE_BN.md](./GUIDE_BN.md) - বাংলা গাইড (Bengali guide)
+
